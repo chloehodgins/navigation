@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        /* General styling */
+        body {
+          margin: 0;
+          font-family: 'Times New Roman', serif;
+          scroll-behavior: smooth; /* Smooth scrolling for navigation */
+        }
+
+        /* CSS Grid Layout */
+        .grid-container {
+          display: grid;
+          grid-template-columns: 10% 90%;
+          height: 100vh; /* Full height */
+        }
+
+        #leftContainer {
+          background-color: #333;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly; /* Evenly distribute links */
+          align-items: stretch; /* Make links stretch to full width */
+          padding: 0;
+          box-sizing: border-box;
+          height: 100vh; /* Full viewport height */
+        }
+
+        .vertical-nav a {
+          text-decoration: none;
+          color: white;
+          display: flex;
+          justify-content: center; /* Center text horizontally */
+          align-items: center; /* Center text vertically */
+          text-align: center;
+          padding: 40px 0; /* Adjust padding */
+          font-size: 14px;
+          transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+        }
+
+        .vertical-nav a:hover {
+          background-color: grey;
+          color: blue;
+        }
+
+        #rightContainer {
+          background-color: transparent;
+          padding: 20px;
+          overflow-y: auto; /* Adds a scrollbar if content overflows */
+        }
+      
+        #foreground {
+          margin: 0 auto; /* Center the block horizontally */
+          padding: 20px; /* Add padding inside the block */
+          height: 50%; 
+        }
+
+        /* Section Styling */
+        section {
+          padding: 40px;
+          margin: 20px 0;
+        }
+
+        section h2 {
+          margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Left Container: Vertical Navigation -->
+        <div id="leftContainer">
+            <div class="vertical-nav">
+                <a href="#foreground">FOREGROUND</a>
+                <a href="#mymind">MY MIND</a>
+                <a href="#storytime">STORYTIME</a>
+                <a href="#resume">RESUME</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+        </div>
+
+        <!-- Right Container: Main Content -->
+        <div id="rightContainer">
+            <section id="foreground">
+                <h2>Foreground</h2>
+                <p>This is the Foreground section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra ligula sit amet nibh ultrices, a convallis elit cursus.</p>
+            </section>
+
+            <section id="mymind">
+                <h2>My Mind</h2>
+                <p>This is the My Mind section. Vivamus aliquet, libero eget fermentum commodo, arcu lectus consequat sapien, at sodales nisi velit et felis.</p>
+            </section>
+
+            <section id="storytime">
+                <h2>Storytime</h2>
+                <p>This is the Storytime section. Maecenas volutpat ligula non enim dignissim varius. Sed porttitor, mauris a scelerisque varius, nunc neque lacinia libero, a vulputate sem justo nec dui.</p>
+            </section>
+
+            <section id="resume">
+                <h2>Resume</h2>
+                <p>This is the Resume section. Suspendisse potenti. Fusce vel mauris magna. Integer nec lorem at urna venenatis vehicula.</p>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>This is the Contact section. Quisque tincidunt nec nulla eget vestibulum. Nam quis felis lacinia, malesuada libero sed, egestas lectus.</p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
+
