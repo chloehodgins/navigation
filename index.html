@@ -1,116 +1,110 @@
 <!DOCTYPE html>
-<html lang="en-CA">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>navigation</title>
     <style>
         /* General styling */
         body {
-          margin: 0;
-          font-family: 'Times New Roman', serif;
-          scroll-behavior: smooth; /* Smooth scrolling for navigation */
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
         }
 
-        /* CSS Grid Layout */
-        .grid-container {
-          display: grid;
-          grid-template-columns: 10% 90%;
-          height: 100vh; /* Full height */
+        /* Navigation Menu Styling */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
-        #leftContainer {
-          background-color: #333;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly; /* Evenly distribute links */
-          align-items: stretch; /* Make links stretch to full width */
-          padding: 0;
-          box-sizing: border-box;
-          height: 100vh; /* Full viewport height */
+        nav h2 {
+            color: #fff;
+            font-size: 18px;
         }
 
-        .vertical-nav a {
-          text-decoration: none;
-          color: white;
-          display: flex;
-          justify-content: center; /* Center text horizontally */
-          align-items: center; /* Center text vertically */
-          text-align: center;
-          padding: 40px 0; /* Adjust padding */
-          font-size: 14px;
-          transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+        nav ul {
+            list-style: none;
+            padding: 0;
         }
 
-        .vertical-nav a:hover {
-          background-color: grey;
-          color: blue;
+        nav ul li {
+            margin: 10px 0;
         }
 
-        #rightContainer {
-          background-color: transparent;
-          padding: 20px;
-          overflow-y: auto; /* Adds a scrollbar if content overflows */
-        }
-      
-        #foreground {
-          margin: 0 auto; /* Center the block horizontally */
-          padding: 20px; /* Add padding inside the block */
-          height: 50%; 
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
         }
 
-        /* Section Styling */
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        /* Main Content Styling */
+        main {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
         section {
-          padding: 40px;
-          margin: 20px 0;
+            padding: 40px 20px;
+            margin: 20px 0;
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
 
         section h2 {
-          margin-top: 0;
+            margin-top: 0;
         }
     </style>
 </head>
 <body>
-    <div class="grid-container">
-        <!-- Left Container: Vertical Navigation -->
-        <div id="leftContainer">
-            <div class="vertical-nav">
-                <a href="#foreground">FOREGROUND</a>
-                <a href="#mymind">MY MIND</a>
-                <a href="#storytime">STORYTIME</a>
-                <a href="#resume">RESUME</a>
-                <a href="#contact">CONTACT</a>
-            </div>
-        </div>
+    <!-- Navigation Menu -->
+    <nav>
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+            <li><a href="#section4">Section 4</a></li>
+        </ul>
+    </nav>
 
-        <!-- Right Container: Main Content -->
-        <div id="rightContainer">
-            <section id="foreground">
-                <h2>Foreground</h2>
-                <p>This is the Foreground section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra ligula sit amet nibh ultrices, a convallis elit cursus.</p>
-            </section>
+    <!-- Main Content -->
+    <main>
+        <section id="section1">
+            <h2>Section 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat urna et fermentum vulputate.</p>
+        </section>
 
-            <section id="mymind">
-                <h2>My Mind</h2>
-                <p>This is the My Mind section. Vivamus aliquet, libero eget fermentum commodo, arcu lectus consequat sapien, at sodales nisi velit et felis.</p>
-            </section>
+        <section id="section2">
+            <h2>Section 2</h2>
+            <p>Donec ut augue a eros convallis facilisis. Vivamus lacinia, elit eu tincidunt pharetra, purus orci interdum elit, id elementum erat arcu non magna.</p>
+        </section>
 
-            <section id="storytime">
-                <h2>Storytime</h2>
-                <p>This is the Storytime section. Maecenas volutpat ligula non enim dignissim varius. Sed porttitor, mauris a scelerisque varius, nunc neque lacinia libero, a vulputate sem justo nec dui.</p>
-            </section>
+        <section id="section3">
+            <h2>Section 3</h2>
+            <p>Sed sed eros at odio hendrerit tristique. Nullam aliquet dolor vel massa tincidunt, et lacinia enim congue.</p>
+        </section>
 
-            <section id="resume">
-                <h2>Resume</h2>
-                <p>This is the Resume section. Suspendisse potenti. Fusce vel mauris magna. Integer nec lorem at urna venenatis vehicula.</p>
-            </section>
-
-            <section id="contact">
-                <h2>Contact</h2>
-                <p>This is the Contact section. Quisque tincidunt nec nulla eget vestibulum. Nam quis felis lacinia, malesuada libero sed, egestas lectus.</p>
-            </section>
-        </div>
-    </div>
+        <section id="section4">
+            <h2>Section 4</h2>
+            <p>Curabitur sit amet lacus vel justo aliquam aliquet. In ac turpis id justo laoreet laoreet eget in ex.</p>
+        </section>
+    </main>
 </body>
 </html>
 
