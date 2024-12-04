@@ -9,6 +9,17 @@
 
   body {
     font-family: "Lato", sans-serif;
+    font-size: 15px;
+  }
+
+  @media (max-width: 768px) {
+  /* Smaller font size for small screens */
+    body {
+      font-size: 14px; 
+    }
+    .tab button {
+      font-size: 8px;
+    }
   }
   
   img {
@@ -19,27 +30,35 @@
 
 /* Style the tab */
 .tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: stretch;
+
   float: left;
-  border: 1px solid #ccc;
   background-color: #f1f1f1;
-  width: 20%;
-  height: 300px;
+  width: 15%;
+  height: 70%;
   margin-top: 10px;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
-  display: block;
-  background-color: inherit;
+  display: flex;
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  background-color: pink;
   color: black;
-  padding: 22px 16px;
-  width: 100%;
+  text-decoration: none;
+  width: 100%; /* Full width */
+  height: 100%; /* Each tab fills its flex space */
   border: none;
   outline: none;
-  text-align: left;
   cursor: pointer;
   transition: 0.3s;
   font-size: 15px;
+  font-family: "American Typewriter", serif;
+  flex: 1; /* Make each tab take equal space */
 }
 
 /* Change background color of buttons on hover */
@@ -59,7 +78,7 @@
   border: 1px solid #ccc;
   width: 80%;
   border-left: none;
-  height: 307px;
+  height: 70%;
   margin-top: 10px;
   background-color: lightblue;
 }
