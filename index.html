@@ -1,108 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>navigation</title>
-  <style>
-    html {
-      scroll-behavior: smooth;
-      font-family: arial;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
 
-    h1 {
-      text-align: center;
-      position: fixed;
-      top: 0;
-      left: 35%;
-    }
-    
-    ul {
-      list-style: none;
-      height: 100%;
-      width: 100px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background: grey;
-      box-shadow: 2px 0px 5px black;
-    }
-    
-    ul li {
-      margin: 5px;
-      padding: 5px;
-      margin-top: 75px;
-    }
-    
-    ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 15px;
-      padding: 0px;
-    }
-    
-    ul li a:hover {
-      background: white;
-      color: purple;
-    }
-    
-    section {
-      height: 100vh;
-      width: 100vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    #section1 {
-      background: lightblue;
-    }
-    #section2 {
-      background: purple;
-    }
-    #section3 {
-      background: pink;
-    }
-    #section4 {
-      background: lightgreen;
-    }
-    #section5 {
-      background: lightyellow;
-    }
-    
-  </style>
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+</style>
 </head>
-  
 <body>
-  <h1>About Me</h1>
-  <nav>
-    <ul>
-      <li><a href="#section1">section1</a></li>
-      <li><a href="#section2">section2</a></li>
-      <li><a href="#section3">section3</a></li>
-      <li><a href="#section4">section4</a></li>
-      <li><a href="#section5">section5</a></li>
-    </ul>
-  </nav>
-  
-  
-  <div class="content">
-    <section id="section1">
-      <h2>section1</h2>
-    </section>
-    <section id="section2">
-      <h2>section2</h2>
-    </section>
-    <section id="section3">
-      <h2>section3</h2>
-    </section>
-    <section id="section4">
-      <h2>section4</h2>
-    </section>
-    <section id="section5">
-      <h2>section5</h2>
-    </section>
-  </div>
+
+<h2>Vertical Tabs</h2>
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
 </body>
-</html>
+</html> 
+
 
