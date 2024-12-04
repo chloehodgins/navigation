@@ -22,8 +22,8 @@
   float: left;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
-  width: 30%;
-  height: 300px;
+  width: 20%;
+  height: 100vh;
   margin-top: 10px;
 }
 
@@ -69,10 +69,10 @@
 <img src="Chloe_Signature.png" alt="image" style="width:50%">
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-  <button class="tablinks" onclick="openCity(event, 'Mind')">Mind</button>
+  <button class="tablinks" onclick="openTab(event, 'London')" id="defaultOpen">London</button>
+  <button class="tablinks" onclick="openTab(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openTab(event, 'Tokyo')">Tokyo</button>
+  <button class="tablinks" onclick="openTab(event, 'Mind')">Mind</button>
 </div>
 
 <div id="London" class="tabcontent">
@@ -96,7 +96,7 @@
 </div>
 
 <script>
-  function openCity(evt, cityName) {
+  function openTab(evt, cityName) {
   let i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
