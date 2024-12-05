@@ -12,13 +12,13 @@
     font-size: 15px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
   /* Smaller font size for small screens */
     body {
-      font-size: 14px; 
+      font-size: 12px; 
     }
     .tab button {
-      font-size: 8px;
+      font-size: 10px;
     }
   }
   
@@ -48,7 +48,7 @@
   align-items: center; /* Center text vertically */
   justify-content: center; /* Center text horizontally */
   background-color: pink;
-  color: black;
+  color: white;
   text-decoration: none;
   width: 100%; /* Full width */
   height: 100%; /* Each tab fills its flex space */
@@ -73,15 +73,33 @@
 
 /* Style the tab content */
 .tabcontent {
+  position: fixed;
   float: left;
   padding: 0px 12px;
   border: 1px solid #ccc;
-  width: 80%;
+  width: 70%;
   border-left: none;
   height: 70%;
   margin-top: 10px;
-  background-color: lightblue;
+  margin-left: 40px;
+  background-image: url('paper-bg.JPG');
 }
+  
+h3 {
+  text-align: center;
+  font-family: "American Typewriter", serif;
+  font-size: 20;
+}
+  
+p {
+  font-family: Apple Chancery, cursive;
+  padding: 0px 30px;
+}
+  
+a {
+  font-family: Apple Chancery, cursive;
+}
+  
 </style>
 </head>
 <body style="background-color:pink;">
@@ -90,35 +108,65 @@
 
 <div class="tab">
   <button class="tablinks" onclick="openTab(event, 'Introduction')" id="defaultOpen">Introduction</button>
-  <button class="tablinks" onclick="openTab(event, 'Education')">Education</button>
-  <button class="tablinks" onclick="openTab(event, 'Tokyo')">Tokyo</button>
+  <button class="tablinks" onclick="openTab(event, 'History')">History</button>
   <button class="tablinks" onclick="openTab(event, 'Mind')">Mind</button>
+  <button class="tablinks" onclick="openTab(event, 'Resume')">Resume</button>
   <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
 </div>
 
 <div id="Introduction" class="tabcontent">
-  <h3>Chloe Hodgins</h3>
-  <p>London is the capital city of England.</p>
+  <p style="text-align:center">Hi, I'm</p>
+  <h3>CHLOE HODGINS</h3>
+  <p>A multidisciplinary product and user interface designer with a background in robot design and coding. As I continued to grow my passion for art and graphic design I unlocked another interest in robotics and tech, leading to winning a robot design competition.</p> 
+  <p>Today, I'm pursuing an Honours Bachelor degree in Global Business and Digital Arts at Waterloo University.</p>
+  <p>My design philosophy: <strong><u>Design made for people should be designed for people.</u></strong></p>
 </div>
 
-<div id="Education" class="tabcontent">
-  <h3>Education</h3>
-  <p>Paris is the capital of France.</p> 
-</div>
-
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+<div id="History" class="tabcontent">
+  <p style="text-align:center">Here's a brief</p>
+  <h3>HISTORY</h3>
+  
+  <img src="history1.png" alt="image">
+  <p>
+    At 5 years old, started my first scrap book and began learning to paint. Gained a reputation in the family for the person who made cards for every celebration. Later that same year, my painting submission won second place in the town’s art fair.
+  </p>
+  
+  <img src="history2.png" alt="image">
+  <p>
+    Participated in my first art show, showcasing visual and digital artworks, including a 18.5” x 21” photorealistic graphite drawing and oil painting, a landscape layered painting, a dress sewn in two days, and a projected digital illustration.
+  </p>
+  
+  <img src="" alt="image">
+  <p>
+    Graduated Saint André Bessette High School the only Yearbook Designer and Illustrator, as well as a leader of the book club, robotics team member, student chapel member, and announcements speaker. Started and ran the school’s first art club, being the only student leader. Received awards in Visual Arts 11 and 12, completing both courses in the same year, and Marketing.
+  </p>
+  
+  <img src="" alt="image">
+  <p>
+    Presently studying at Waterloo University’s Global Business and Digital Arts’s remote campus building in Stratford, Ontario. Building up my knowledge of relevant industry tech and software with projects and learning guided by industry-experienced instructors.  
+  </p>
+  
 </div>
   
 <div id="Mind" class="tabcontent">
-  <h3>What's on my mind</h3>
+  <p style="text-align:center">What's on my</p>
+  <h3>MIND</h3>
   <p>Mind is the capital.</p>
 </div>
   
+<div id="Resume" class="tabcontent">
+  <p style="text-align:center">Check out my</p>
+  <h3>RESUME</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+  
 <div id="Contact" class="tabcontent">
-  <h3>Contact</h3>
-  <p>Mind is the capital.</p>
+  <p style="text-align:center">Feel free to</p>
+  <h3>CONTACT</h3>
+  <p>Email</p>
+  <a href="mailto:cvhodgin@uwaterloo.ca">cvhodgin@uwaterloo.ca</a>
+  <p>LinkedIn</p>
+  <a href="www.linkedin.com/in/chloehodgins">in/chloehodgins/linked</a>
 </div>
 
 <script>
