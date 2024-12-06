@@ -21,7 +21,7 @@
     }
     
     h4 {
-      position: fixed;
+      position: absolute;
       font-size: 10px;
       color: #C86B85;
     }
@@ -102,17 +102,28 @@ h3 {
   font-family: "Arial Black", sans-serif;
   font-size: 30;
   color: #A94064; 
+  line-height: 0;
 }
   
 h4 {
-  position: fixed;
-  font-size: 50;
+  position: absolute;
+  font-size: 20;
+  color: #A94064;
+  line-height: 1.2;
+}
+  
+h5 {
+  position: absolute;
+  font-family: "Gill sans", sans-serif;
   color: #C86B85;
+  font-style: italic;
+  line-height: 0;
 }
   
 p {
-  font-family: "Gil sans", sans-serif;
+  font-family: "Gill sans", sans-serif;
   color: #A40E1C;
+  line-height: 1.2;
 }
   
 a {
@@ -155,11 +166,23 @@ a {
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
-  
-#Introduction {
-  background-image: url('paper-bg.JPG');
+.rectangle {
+  width: 110%; 
+  height: 180px; /* Height of the rectangle */
+  background-color: #FFCECE; /* Color of the rectangle */
+  position: relative; 
+  z-index: 0; /* Ensures it's behind text */
 }
   
+#Introduction h4{
+  top: 200px;
+  left: 30px;
+}
+  
+#Introduction h5{
+  top: 185px;
+  left: 30px;
+}
 </style>
 </head>
 <body style="background-color:#FADADD;">
@@ -170,17 +193,19 @@ a {
   <button class="tablinks" onclick="openTab(event, 'Introduction')" id="defaultOpen">Introduction</button>
   <button class="tablinks" onclick="openTab(event, 'History')">History</button>
   <button class="tablinks" onclick="openTab(event, 'Mind')">Mind</button>
-  <button class="tablinks" onclick="openTab(event, 'Resume')">Resume</button>
   <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
 </div>
 
 <div id="Introduction" class="tabcontent">
   <p style="text-align:center">Hi, I'm</p>
   <h3>CHLOE HODGINS</h3>
-  <p style="text-align:center">multi-disciplinary product and user interface<br>designer with a passion for tech and art</p> 
-  <h4 style="float:bottom-left">
-  <strong><u>Design made for people<br>should be designed for<br>people.</u></strong>
-  </h4>
+  <p style="text-align:center">a multi-disciplinary product and user interface<br>designer with a passion for tech and art<br><br><br></p> 
+  <div class="rectangle"></div>
+  <h5>my design philosophy</h5>
+  <h4><strong><u>Design made for people<br>should be designed for<br>people.</u></strong></h4>
+  <p style="text-align:center"><br>A gallery of</p>
+  <h3>MY WORK</h3> 
+   
 </div>
 
 <div id="History" class="tabcontent">
@@ -205,7 +230,6 @@ a {
   <p style="text-align:center">
     Presently studying at Waterloo University’s Global Business and Digital Arts’s remote campus building in Stratford, Ontario. Building up my knowledge of relevant industry tech and software with projects and learning guided by industry-experienced instructors.  
   </p>
-  
 </div>
   
 <div id="Mind" class="tabcontent">
@@ -228,12 +252,6 @@ a {
     </div>
   </div>
   
-</div>
-  
-<div id="Resume" class="tabcontent">
-  <p style="text-align:center">Check out my</p>
-  <h3>RESUME</h3>
-  <p>Tokyo is the capital of Japan.</p>
 </div>
   
 <div id="Contact" class="tabcontent">
