@@ -32,6 +32,14 @@
     margin-left: 20px;
     margin-right: 20px;
   }
+  
+  #signature-img {
+    position: fixed; 
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 999; 
+  }
 
 .tab {
   display: flex;
@@ -94,7 +102,7 @@
   height: 1560px;
   background-image: url('paper-bg.JPG');
   box-sizing: border-box;
-  margin-top: 50px;
+  margin-top: 180px;
 }
   
 h3 {
@@ -174,38 +182,46 @@ a {
   z-index: 0; /* Ensures it's behind text */
 }
   
-#Introduction h4{
-  top: 200px;
+.line {
+  width: 100%; 
+  border-top: 2px solid #A94064; 
+  margin-top: 40px; 
+}
+  
+#Main h4{
+  top: 25px;
   left: 30px;
 }
   
-#Introduction h5{
-  top: 185px;
+#Main h5{
+  top: 10px;
   left: 30px;
 }
 </style>
 </head>
 <body style="background-color:#FADADD;">
 
-<img src="title-signature.png" alt="image" style="width:200; display: block; margin: 20px auto;">
+<img id="signature-img" src="title-signature.png" alt="image" style="width:200; display: block; margin: 20px auto;">
 
 <div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Introduction')" id="defaultOpen">Introduction</button>
+  <button class="tablinks" onclick="openTab(event, 'Main')" id="defaultOpen">Main</button>
   <button class="tablinks" onclick="openTab(event, 'History')">History</button>
   <button class="tablinks" onclick="openTab(event, 'Mind')">Mind</button>
   <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
 </div>
 
-<div id="Introduction" class="tabcontent">
+<div id="Main" class="tabcontent">
   <p style="text-align:center">Hi, I'm</p>
   <h3>CHLOE HODGINS</h3>
   <p style="text-align:center">a multi-disciplinary product and user interface<br>designer with a passion for tech and art<br><br><br></p> 
-  <div class="rectangle"></div>
-  <h5>my design philosophy</h5>
-  <h4><strong><u>Design made for people<br>should be designed for<br>people.</u></strong></h4>
+  <div class="rectangle"><h5>my design philosophy</h5>
+  <h4><strong><u>Design made for people<br>should be designed for<br>people.</u></strong></h4></div>
+  
   <p style="text-align:center"><br>A gallery of</p>
   <h3>MY WORK</h3> 
-   
+  <div class="line">
+    
+  </div>
 </div>
 
 <div id="History" class="tabcontent">
