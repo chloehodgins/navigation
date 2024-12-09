@@ -125,6 +125,12 @@ h5 {
   line-height: 0;
 }
   
+h6 {
+  font-size: 20;
+  color: #A94064;
+  line-height: 1.2;
+}
+  
 p {
   font-family: "Gill sans", sans-serif;
   color: #A40E1C;
@@ -182,12 +188,13 @@ a {
 .line {
   width: 100%; 
   border-top: 2px solid #A94064; 
-  margin-top: 40px; 
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
   
 table {
   border-collapse: collapse;
-  margin: 40px auto 0 auto;
+  margin: 30px auto 0 auto;
   width: 90%;
   border: 2px solid #A94064;
 }
@@ -201,6 +208,44 @@ th, td {
   
 th:nth-child(1), th:nth-child(2), th:nth-child(3) {
   background-color: #FFCECE;
+}
+  
+.tab-container {
+  width: 700px;
+  margin: 50px auto; /* Center the tabs container */
+}
+
+.tab {
+  background-color: #FADADD;
+  color: #A94064;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Space between tabs */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  text-align: center;
+}
+
+.tab:hover {
+  background-color: #A94064;
+  color: white;
+}
+
+.tab .content {
+  max-height: 0;
+  overflow: hidden;
+  color: #FADADD;
+  padding: 0 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  line-height: 1.5;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.tab:hover .content {
+  max-height: 150px; /* Adjust height based on content */
+  padding: 10px 15px; /* Add padding for visible content */
 }
   
 #Main h4{
@@ -233,12 +278,13 @@ th:nth-child(1), th:nth-child(2), th:nth-child(3) {
   margin-left: 25;
 }
   
-#Mind h4{
-  text-align: center;
+#Mind {
+ background-color: #FFCECE;
 }
   
 </style>
 </head>
+  
 <body style="background-color:#FADADD;">
 
 <img id="signature-img" src="title-signature.png" alt="image" style="width:200; display: block; margin: 20px auto;">
@@ -267,6 +313,7 @@ th:nth-child(1), th:nth-child(2), th:nth-child(3) {
 <div id="History" class="navcontent">
   <p style="text-align:center">Here's a brief</p>
   <h3>HISTORY</h3>
+  <div class="line"></div>
   
   <img src="history-1.png" alt="history image 1" style="float:left">
   <p>
@@ -331,8 +378,34 @@ th:nth-child(1), th:nth-child(2), th:nth-child(3) {
 <div id="Mind" class="navcontent">
   <p style="text-align:center">What's on my</p>
   <h3>MIND</h3>
-  <h4>Hobbies</h4>
-  
+  <div class="line"></div>
+  <h6 style="text-align:center">Hobbies</h6>
+  <div class="tab-container">
+  <div class="tab">
+    Fashion
+    <div class="content">
+      This is the expanded content for Tab 1. Add more details here as needed.
+    </div>
+  </div>
+  <div class="tab">
+    Arts
+    <div class="content">
+      This is the expanded content for Tab 2. Add more details here as needed.
+    </div>
+  </div>
+  <div class="tab">
+    Sports
+    <div class="content">
+      This is the expanded content for Tab 3. Add more details here as needed.
+    </div>
+  </div>
+  <div class="tab">
+    Music
+    <div class="content">
+      This is the expanded content for Tab 3. Add more details here as needed.
+    </div>
+  </div>
+</div>
 </div>
   
 <div id="Contact" class="navcontent">
