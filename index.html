@@ -16,7 +16,7 @@
       font-size: 12px; 
     }
     
-    .tab button {
+    .nav button {
       font-size: 10px;
     }
     
@@ -41,31 +41,30 @@
     z-index: 999; 
   }
 
-.tab {
+.nav {
   display: flex;
   position: fixed;
   top: 130;
   width: 98.1%; 
   height: 50px; /* Adjust height for top layout */
   z-index: 1000;
-  justify-content: center; /* Center the tabs horizontally */
+  justify-content: center; 
   align-items: center;
   background-color: #f1f1f1;
   margin: 0; 
-  border-bottom: 2px solid #e6b3b3; /* Add bottom border for a tab-bar effect */
+  border-bottom: 2px solid #e6b3b3; 
 
 }
 
-/* Style the buttons inside the tab */
-.tab button {
+.nav button {
   display: flex;
-  align-items: center; /* Center text vertically */
-  justify-content: center; /* Center text horizontally */
+  align-items: center;
+  justify-content: center; 
   background-color: #C86B85;
   color: white;
   text-decoration: none;
-  width: 100%; /* Full width */
-  height: 100%; /* Each tab fills its flex space */
+  width: 100%; 
+  height: 100%; 
   border: none;
   outline: none;
   cursor: pointer;
@@ -76,7 +75,7 @@
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+.nav button:hover {
   background-color: #ffc0cb;
   font-size: 17px;
   font-family: "Georgia", serif;
@@ -84,21 +83,19 @@
   color: #ae1f1f;
 }
 
-/* Create an active/current "tab button" class */
-.tab button.active {
+.nav button.active {
   background-color: #e6b3b3;
   font-family: "Georgia", serif;
   font-style: italic;
   color: #A94064;
 }
   
-/* Style the tab content */
-.tabcontent {
+.navcontent {
   position: relative;
   padding: 12px;
   border: 1px solid #e6b3b3;
   width: 100%;
-  max-width: 100%;
+  max-width: 99.6%;
   height: 1560px;
   background-image: url('paper-bg.JPG');
   box-sizing: border-box;
@@ -236,20 +233,24 @@ th:nth-child(1), th:nth-child(2), th:nth-child(3) {
   margin-left: 25;
 }
   
+#Mind h4{
+  text-align: center;
+}
+  
 </style>
 </head>
 <body style="background-color:#FADADD;">
 
 <img id="signature-img" src="title-signature.png" alt="image" style="width:200; display: block; margin: 20px auto;">
 
-<div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Main')" id="defaultOpen">Main</button>
-  <button class="tablinks" onclick="openTab(event, 'History')">History</button>
-  <button class="tablinks" onclick="openTab(event, 'Mind')">Mind</button>
-  <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
+<div class="nav">
+  <button class="navlinks" onclick="openNav(event, 'Main')" id="defaultOpen">Main</button>
+  <button class="navlinks" onclick="openNav(event, 'History')">History</button>
+  <button class="navlinks" onclick="openNav(event, 'Mind')">Mind</button>
+  <button class="navlinks" onclick="openNav(event, 'Contact')">Contact</button>
 </div>
 
-<div id="Main" class="tabcontent">
+<div id="Main" class="navcontent">
   <p style="text-align:center">Hi, I'm</p>
   <h3>CHLOE HODGINS</h3>
   <p style="text-align:center">a multi-disciplinary product and user interface<br>designer with a passion for tech and art<br><br><br></p> 
@@ -263,7 +264,7 @@ th:nth-child(1), th:nth-child(2), th:nth-child(3) {
   </div>
 </div>
 
-<div id="History" class="tabcontent">
+<div id="History" class="navcontent">
   <p style="text-align:center">Here's a brief</p>
   <h3>HISTORY</h3>
   
@@ -327,29 +328,14 @@ th:nth-child(1), th:nth-child(2), th:nth-child(3) {
 
 </div>
   
-<div id="Mind" class="tabcontent">
+<div id="Mind" class="navcontent">
   <p style="text-align:center">What's on my</p>
   <h3>MIND</h3>
-  <div class="dropdown" style="float:left;">
-  <button class="dropbtn">Technical</button>
-    <div class="dropdown-content" style="left:0;">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div>
-  <div class="dropdown" style="float:right;">
-  <button class="dropbtn">Hobbies</button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div>
+  <h4>Hobbies</h4>
   
 </div>
   
-<div id="Contact" class="tabcontent">
+<div id="Contact" class="navcontent">
   <p style="text-align:center">Feel free to</p>
   <h3>CONTACT</h3>
   <p>Email</p>
@@ -359,15 +345,15 @@ th:nth-child(1), th:nth-child(2), th:nth-child(3) {
 </div>
 
 <script>
-  function openTab(evt, cityName) {
-  let i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+  function openNav(evt, cityName) {
+  let i, navcontent, navlinks;
+  navcontent = document.getElementsByClassName("navcontent");
+  for (i = 0; i < navcontent.length; i++) {
+    navcontent[i].style.display = "none";
   }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  navlinks = document.getElementsByClassName("navlinks");
+  for (i = 0; i < navlinks.length; i++) {
+    navlinks[i].className = navlinks[i].className.replace(" active", "");
   }
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
