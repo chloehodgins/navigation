@@ -150,7 +150,14 @@ a {
   z-index: 0; /* Ensures it's behind text */
 }
   
-
+.rectangle-border {
+  width: 50%; /* Adjust width as needed */
+  height: 600px; /* Adjust height as needed */
+  border: 2px solid #A94064; /* Border color and thickness */
+  background-color: transparent; /* Ensure no fill color */
+  position: relative; /* If positioning is needed */
+  box-sizing: border-box; /* Include border in dimensions */
+}
   
 .line {
   width: 100%; 
@@ -255,6 +262,13 @@ th:nth-child(1), th:nth-child(2), th:nth-child(3) {
   z-index: 999; 
   max-width: 90%;
   height: auto;
+}
+  
+#Contact .rectangle-border{
+  display: flex; 
+  justify-content: center; 
+  height: 100vh; 
+  margin: auto; 
 }
   
 </style>
@@ -409,10 +423,14 @@ th:nth-child(1), th:nth-child(2), th:nth-child(3) {
 <div id="Contact" class="navcontent">
   <p style="text-align:center">Feel free to</p>
   <h3>CONTACT</h3>
-  <p>Email</p>
-  <a href="mailto:cvhodgin@uwaterloo.ca">cvhodgin@uwaterloo.ca</a>
-  <p>LinkedIn</p>
-  <a href="www.linkedin.com/in/chloehodgins">in/chloehodgins/linked</a>
+  <div class="line"></div>
+  <div class="rectangle-border">
+    <p>Email</p>
+    <a href="mailto:cvhodgin@uwaterloo.ca"><br>cvhodgin@uwaterloo.ca</a>
+    <p>LinkedIn</p>
+    <a href="www.linkedin.com/in/chloehodgins"><br>in/chloehodgins/linked</a>
+  
+  </div>
 </div>
 
 <script>
