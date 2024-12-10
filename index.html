@@ -1,509 +1,518 @@
 <!DOCTYPE html>
 <html lang="en-CA">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Chloe</title>
-<style>
-  body {
-    font-family: "Lato", sans-serif;
-    font-size: 15px;
-  }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Chloe</title>
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        font-size: 15px;
+      }
 
-  @media (max-width: 800px) {
-    body {
-      font-size: 12px; 
-    }
-    
-    .nav button {
-      font-size: 10px;
-    }
-    
-    h4 {
-      position: absolute;
-      font-size: 10px;
-      color: #C86B85;
-    }
-  }
-  
-  img {
-    display: block;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  
-  #signature-img {
-    position: fixed; 
-    top: 0; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    z-index: 999; 
-  }
+      @media (max-width: 800px) {
+        body {
+          font-size: 12px;
+        }
 
-.nav {
-  display: flex;
-  position: fixed;
-  top: 130;
-  width: 99%; 
-  height: 50px;
-  z-index: 1000;
-  justify-content: center; 
-  align-items: center;
-  background-color: #f1f1f1;
-  margin: 0; 
-  border-bottom: 2px solid #e6b3b3; 
+        .nav button {
+          font-size: 10px;
+        }
 
-}
+        h4 {
+          position: absolute;
+          font-size: 10px;
+          color: #C86B85;
+        }
+      }
 
-.nav button {
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-  background-color: #C86B85;
-  color: white;
-  text-decoration: none;
-  width: 100%; 
-  height: 100%; 
-  border: none;
-  outline: none;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 14px;
-  font-family: "Verdana", sans-serif;
-  flex: 1; 
-}
+      img {
+        display: block;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
 
-.nav button:hover {
-  background-color: #ffc0cb;
-  font-size: 17px;
-  font-family: "Georgia", serif;
-  font-style: italic;
-  color: #ae1f1f;
-}
+      #signature-img {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+      }
 
-.nav button.active {
-  background-color: #e6b3b3;
-  font-family: "Georgia", serif;
-  font-style: italic;
-  color: #A94064;
-}
-  
-.navcontent {
-  position: relative;
-  padding: 12px;
-  border: 1px solid #e6b3b3;
-  width: 100%;
-  height: 1220px;
-  background-image: url('paper-bg.JPG');
-  box-sizing: border-box;
-  margin-top: 180px;
-}
-  
-h3 {
-  text-align: center;
-  font-family: "Arial Black", sans-serif;
-  font-size: 30;
-  color: #A94064; 
-  line-height: 0;
-}
-  
-h4 {
-  position: absolute;
-  font-size: 20;
-  color: #A94064;
-  line-height: 1.2;
-}
-  
-h5 {
-  position: absolute;
-  font-family: "Gill sans", sans-serif;
-  color: #C86B85;
-  font-style: italic;
-  line-height: 0;
-}
-  
-h6 {
-  font-size: 20;
-  color: #A94064;
-  line-height: 1.2;
-}
-  
-p {
-  font-family: "Gill sans", sans-serif;
-  color: #A40E1C;
-  line-height: 1.2;
-}
-  
-a {
-  font-family: "Apple Chancery", cursive;
-  color: #C86B85;
-}
+      .nav {
+        display: flex;
+        position: fixed;
+        top: 130;
+        width: 99%;
+        height: 50px;
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        background-color: #f1f1f1;
+        margin: 0;
+        border-bottom: 2px solid #e6b3b3;
 
-.rectangle {
-  width: 100%;; 
-  height: 180px; 
-  background-color: #FFCECE; 
-  position: relative; 
-  z-index: 0;
-}
-  
-.rectangle-border {
-  display: flex;
-  flex-direction: column; 
-  justify-content: space-evenly; 
-  padding: 20px; 
-  border: 2px solid #A94064; 
-  width: 50%; 
-  max-width: 600px; 
-  margin: 0 auto; 
-  max-height: 700px;
-}
-  
-.contact-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  text-align: center; 
-  margin: 80px 0; 
-}
-  
-.line {
-  width: 100%; 
-  border-top: 2px solid #A94064; 
-  margin-top: 60px;
-  margin-bottom: 40px;
-}
-  
-table {
-  border-collapse: collapse;
-  margin: 30px auto 0 auto;
-  width: 90%;
-  border: 2px solid #A94064;
-}
+      }
 
-th, td {
-  color: A94064;
-  text-align: center;
-  padding: 16px;
-  border: 2px solid #A94064; 
-}
-  
-th:nth-child(1), th:nth-child(2), th:nth-child(3) {
-  background-color: #FFCECE;
-}
-  
-.tab-container {
-  width: 700px;
-  margin: 50px auto; 
-}
+      .nav button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #C86B85;
+        color: white;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 14px;
+        font-family: "Verdana", sans-serif;
+        flex: 1;
+      }
 
-.tab {
-  background-color: #FADADD;
-  color: #A94064;
-  padding: 15px;
-  border-radius: 5px;
-  margin-bottom: 10px; 
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  position: relative;
-  text-align: center;
-}
+      .nav button:hover {
+        background-color: #ffc0cb;
+        font-size: 17px;
+        font-family: "Georgia", serif;
+        font-style: italic;
+        color: #ae1f1f;
+      }
 
-.tab:hover {
-  background-color: #A94064;
-  color: white;
-}
+      .nav button.active {
+        background-color: #e6b3b3;
+        font-family: "Georgia", serif;
+        font-style: italic;
+        color: #A94064;
+      }
 
-.tab .content {
-  max-height: 0;
-  overflow: hidden;
-  color: #FADADD;
-  padding: 0 15px;
-  margin-top: 10px;
-  border-radius: 5px;
-  line-height: 1.5;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-}
+      .navcontent {
+        position: relative;
+        padding: 12px;
+        border: 1px solid #e6b3b3;
+        width: 100%;
+        height: 1220px;
+        background-image: url('paper-bg.JPG');
+        box-sizing: border-box;
+        margin-top: 180px;
+      }
 
-.tab:hover .content {
-  max-height: 150px; 
-  padding: 10px 15px;
-}
-  
-#Main h4{
-  top: 25px;
-  left: 30px;
-}
-  
-#Main h5{
-  top: 10px;
-  left: 30px;
-}
-  
-#history .rectangle{
-  top: 30px;
-}
-  
-#History h4{
-  font-size: 15;
-  top: 34px;
-  left: 30px;
-}
-  
-#History h5{
-  top: 9px;
-  left: 30px;
-}
-  
-#History p{
-  margin-right: 25;
-  margin-left: 25;
-}
+      h3 {
+        text-align: center;
+        font-family: "Arial Black", sans-serif;
+        font-size: 30;
+        color: #A94064;
+        line-height: 0;
+      }
 
-#building-img {
-  margin-top: 22; 
-}
-  
-#Mind {
- background-color: #FFCECE;
-}
-  
-#work-img {
-  display: block;
-  margin: 0 auto; 
-  z-index: 999; 
-  max-width: 90%;
-  height: 52%;
-}
-  
-#Contact .rectangle-border{
-  display: flex; 
-  justify-content: center; 
-  height: 100vh; 
-  margin-bottom: 80px;
-}
-  
-#Contact h6{
-  font-size: 18px; 
-  color: #A94064;
-  font-family: "Verdana", sans-serif; 
-  margin: 5px 0;
-  text-align: center;
-  flex: 1; 
-  flex-direction: column; 
-}
-  
-#Contact h4{
-  top: 25px;
-  left: 30px;
-}
-  
-#Contact p{
-  font-size: 14px; 
-  margin: 0; 
-  color: #C86B85; 
-  font-family: "Gill Sans", sans-serif; 
-  text-align: center; 
-  flex-direction: column; 
-}
-  
-</style>
-</head>
-  
-<body style="background-color:#FADADD;">
+      h4 {
+        position: absolute;
+        font-size: 20;
+        color: #A94064;
+        line-height: 1.2;
+      }
 
-<img id="signature-img" src="signature-header.png" alt="title image" style="width:2000; display: block; margin: auto;">
+      h5 {
+        position: absolute;
+        font-family: "Gill sans", sans-serif;
+        color: #C86B85;
+        font-style: italic;
+        line-height: 0;
+      }
 
-<div class="nav">
-  <button class="navlinks" onclick="openNav(event, 'Main')" id="defaultOpen">Main</button>
-  <button class="navlinks" onclick="openNav(event, 'History')">History</button>
-  <button class="navlinks" onclick="openNav(event, 'Mind')">Mind</button>
-  <button class="navlinks" onclick="openNav(event, 'Contact')">Contact</button>
-</div>
+      h6 {
+        font-size: 20;
+        color: #A94064;
+        line-height: 1.2;
+      }
 
-<div id="Main" class="navcontent">
-  <p style="text-align:center">Hi, I'm</p>
-  <h3>CHLOE HODGINS</h3>
-  <p style="text-align:center">a multi-disciplinary product and user interface<br>designer with a passion for tech and art<br><br><br></p> 
-  <div class="rectangle"><h5>my design philosophy</h5>
-  <h4><strong><u>Design made for people<br>should be designed for<br>people.</u></strong></h4></div>
-  
-  <p style="text-align:center"><br>A gallery of</p>
-  <h3>MY WORK</h3> 
-  <div class="line"></div>
-  <img id="work-img" src="work-gallery2.png" alt="work gallery">
-</div>
+      p {
+        font-family: "Gill sans", sans-serif;
+        color: #A40E1C;
+        line-height: 1.2;
+      }
 
-<div id="History" class="navcontent">
-  <p style="text-align:center">Here's a brief</p>
-  <h3>HISTORY</h3>
-  <div class="line"></div>
-  
-  <img src="history-1.png" alt="history image 1" style="float:left">
-  <p>
-    At 5 years old, started my first scrap book and began learning to paint. Gained a reputation in the family for the person who made cards for every celebration. Later that same year, my painting submission won second place in the town’s art fair.
-  </p>
-  
-  <img src="history-2.png" alt="history image 2" style="float:right">
-  <p style="text-align:right">
-    <br>Participated in my first art show, showcasing visual and digital artworks, including a 18.5” x 21” photorealistic graphite drawing and oil painting, a landscape layered painting, a dress sewn in two days, and a projected digital illustration.
-  </p>
-  
-  <img src="history-3.png" alt="image" style="float:left">
-  <p><br>Graduated Saint André Bessette High School the only Yearbook Designer and Illustrator, as well as a leader of the book club, robotics team member, student chapel member, and announcements speaker. Started and ran the school’s first art club, being the only student leader. Received awards in Visual Arts 11 and 12, completing both courses in the same year, and Marketing.
-  </p>
-  <div class="rectangle"><h5>present day</h5>
-  <h4>Presently pursuing an Honours Bachelor of<br> 
-<i>Global Business and Digital Arts</i> at <u>Waterloo University</u>,<br>building up my knowledge of relevant industry tech and<br>software with projects and learning guided by<br>industry-experienced instructors.</h4>
-<img id="building-img" src="building.png" alt="GBDA building" style="float:right">
-</div>
-<br><br><br>
-<p style="text-align:center">List of my</p>
-<h3>SKILLS</h3>
-<div class="line"></div>
-<table>
-  <tr>
-    <th>Software</th>
-    <th>Technology</th>
-    <th>Languages</th>
-  </tr>
-  <tr>
-    <td>Adobe Photoshop</td>
-    <td>iPad Pro 2020</td>
-    <td>English</td>
-  </tr>
-  <tr>
-    <td>Adobe InDesign</td>
-    <td>Macbook Pro 2023</td>
-    <td>French</td>
-  </tr>
-  <tr>
-    <td>Adobe Illustrator</td>
-    <td>Canon EOS Rebel T7 Camera</td>
-    <td>Tagalog</td>
-  </tr>
-  <tr>
-    <td>Procreate</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Figma</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>AutoCAD / Fusion360</td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
+      a {
+        font-family: "Apple Chancery", cursive;
+        color: #C86B85;
+      }
 
-</div>
-  
-<div id="Mind" class="navcontent">
-  <p style="text-align:center">What's on my</p>
-  <h3>MIND</h3>
-  <div class="line"></div>
-  <h6 style="text-align:center">Hobbies</h6>
-  <div class="tab-container">
-  <div class="tab">
-    Fashion
-    <div class="content">
-      What began as a love for playing dress-up developed into a passion for fashion design. I started with fashion sketching, experimenting with pairing clothing and jewelry around my home, and progressed to exploring fashion photography. Eventually, I began creating my own print designs and clothing.
+      .rectangle {
+        width: 100%;
+        ;
+        height: 180px;
+        background-color: #FFCECE;
+        position: relative;
+        z-index: 0;
+      }
+
+      .rectangle-border {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 20px;
+        border: 2px solid #A94064;
+        width: 50%;
+        max-width: 600px;
+        margin: 0 auto;
+        max-height: 700px;
+      }
+
+      .contact-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 80px 0;
+      }
+
+      .line {
+        width: 100%;
+        border-top: 2px solid #A94064;
+        margin-top: 60px;
+        margin-bottom: 40px;
+      }
+
+      table {
+        border-collapse: collapse;
+        margin: 30px auto 0 auto;
+        width: 90%;
+        border: 2px solid #A94064;
+      }
+
+      th,
+      td {
+        color: A94064;
+        text-align: center;
+        padding: 16px;
+        border: 2px solid #A94064;
+      }
+
+      th:nth-child(1),
+      th:nth-child(2),
+      th:nth-child(3) {
+        background-color: #FFCECE;
+      }
+
+      .tab-container {
+        width: 700px;
+        margin: 50px auto;
+      }
+
+      .tab {
+        background-color: #FADADD;
+        color: #A94064;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        position: relative;
+        text-align: center;
+      }
+
+      .tab:hover {
+        background-color: #A94064;
+        color: white;
+      }
+
+      .tab .content {
+        max-height: 0;
+        overflow: hidden;
+        color: #FADADD;
+        padding: 0 15px;
+        margin-top: 10px;
+        border-radius: 5px;
+        line-height: 1.5;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+      }
+
+      .tab:hover .content {
+        max-height: 150px;
+        padding: 10px 15px;
+      }
+
+      #Main h4 {
+        top: 25px;
+        left: 30px;
+      }
+
+      #Main h5 {
+        top: 10px;
+        left: 30px;
+      }
+
+      #history .rectangle {
+        top: 30px;
+      }
+
+      #History h4 {
+        font-size: 15;
+        top: 34px;
+        left: 30px;
+      }
+
+      #History h5 {
+        top: 9px;
+        left: 30px;
+      }
+
+      #History p {
+        margin-right: 25;
+        margin-left: 25;
+      }
+
+      #building-img {
+        margin-top: 22;
+      }
+
+      #Mind {
+        background-color: #FFCECE;
+      }
+
+      #work-img {
+        display: block;
+        margin: 0 auto;
+        z-index: 999;
+        max-width: 90%;
+        height: 52%;
+      }
+
+      #Contact .rectangle-border {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        margin-bottom: 80px;
+      }
+
+      #Contact h6 {
+        font-size: 18px;
+        color: #A94064;
+        font-family: "Verdana", sans-serif;
+        margin: 5px 0;
+        text-align: center;
+        flex: 1;
+        flex-direction: column;
+      }
+
+      #Contact h4 {
+        top: 25px;
+        left: 30px;
+      }
+
+      #Contact p {
+        font-size: 14px;
+        margin: 0;
+        color: #C86B85;
+        font-family: "Gill Sans", sans-serif;
+        text-align: center;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+
+  <body style="background-color:#FADADD;">
+
+    <img id="signature-img" src="signature-header.png" alt="title image" style="width:500; display: block; margin: auto;">
+
+    <div class="nav">
+      <button class="navlinks" onclick="openNav(event, 'Main')" id="defaultOpen">Main</button>
+      <button class="navlinks" onclick="openNav(event, 'History')">History</button>
+      <button class="navlinks" onclick="openNav(event, 'Mind')">Mind</button>
+      <button class="navlinks" onclick="openNav(event, 'Contact')">Contact</button>
     </div>
-    
-  </div>
-  <div class="tab">
-    Arts
-    <div class="content">
-      Since my childhood of pencil sketching, scrapbooking, jewelry making, and painting I have received a formal education in art and now design. My interests in art now additionally include cinematography, animation, printmaking, 3D printing, comic illustration, and graphic design.
-    </div>
-  </div>
-  <div class="tab">
-    Sports
-    <div class="content">
-      When it comes to sports I have several to choose from, including skiing, rollerblading, ice skating, cycling, and golfing. I was previously a long-distance marathon runner, alongside regularly playing soccer and basketball. These days, I regularly go to the gym, swim, and run.
-    </div>
-  </div>
-  <div class="tab">
-    Music
-    <div class="content">
-      A love for singing and acting led to my interest in theatre and landing my first lead role in a production of the Wizard of Oz, as Dorothy. Continued acting alongside learning to play the piano and acoustic guitar. 
-    </div>
-  </div>
-</div>
-  
-<h6 style="text-align:center">Interests</h6>
-  <div class="tab-container">
-  <div class="tab">
-    Reading
-    <div class="content">
-      I enjoy a variety of book genres, including historical fiction, mystery, graphic novels, and comics. Some of my favorite books and series are The Thief Lord, Harry Potter, Macbeth, Assassin’s Curse, and Secrets. My favorite authors include Neil Gaiman, David Walliams, and Dr. Seuss.
-    </div>
-  </div>
-  <div class="tab">
-    Language Learning
-    <div class="content">
-      I am fully fluent in English, French, and Tagalog, with additional experience in Spanish and Korean.
-    </div>
-  </div>
-  <div class="tab">
-    Design
-    <div class="content">
-      I admire the work of fashion designers Robert Wun and Tamara Ralph, along with my favorite print designs by Areesha Khalid. When it comes to historical art, Vincent Van Gogh, Claude Monet, and Frida Kahlo are among my inspirations. For timeless animated filmmaking, I appreciate the artistry of Studio Ghibli, Gobelins, and classic Disney productions.
-    </div>
-  </div>
-</div>
-</div>
-  
-<div id="Contact" class="navcontent">
-  <p style="text-align:center">Feel free to</p>
-  <h3>CONTACT</h3>
-  <div class="line"></div>
-  <div class="rectangle-border">
-    <div class="contact-item">
-      <h6>Mail</h6>
-      <p><a href="mailto:cvhodgin@uwaterloo.ca"><br>cvhodgin@uwaterloo.ca</a></p>
-    </div>
-    <div class="contact-item">
-      <h6>Phone</h6>
-      <p><a href="tel:+15092330987"><br>+1 509-233-0987</a></p>
-    </div>
-    <div class="contact-item">
-      <h6>Social</h6>
-      <p><a href="https://www.linkedin.com/in/chloehodgins/"><br>https://www.linkedin.com/in/chloehodgins/</a></p>
-      <p><a href="https://github.com/chloehodgins/"><br>https://github.com/chloehodgins/</a></p>
-    </div>
-  </div>
-  
-  <div class="rectangle"><h4><strong>Looking forward to<br>hearing from you!</strong></h4></div>
-</div>
 
-<script>
-  function openNav(evt, sectionName) {
-  let i, navcontent, navlinks;
+    <div id="Main" class="navcontent">
+      <p style="text-align:center">Hi, I'm</p>
+      <h3>CHLOE HODGINS</h3>
+      <p style="text-align:center">a multi-disciplinary product and user interface<br>designer with a passion for tech and art<br><br><br></p>
+      <div class="rectangle">
+        <h5>my design philosophy</h5>
+        <h4><strong><u>Design made for people<br>should be designed for<br>people.</u></strong></h4>
+      </div>
 
-  // Hide all sections
-  navcontent = document.getElementsByClassName("navcontent");
-  for (i = 0; i < navcontent.length; i++) {
-    navcontent[i].classList.remove("active");
-    navcontent[i].style.display = "none";
-    navcontent[i].scrollTop = 0; // Reset scroll position
-  }
-    
-  navlinks = document.getElementsByClassName("navlinks");
-  for (i = 0; i < navlinks.length; i++) {
-    navlinks[i].className = navlinks[i].className.replace(" active", "");
-  }
-    document.getElementById(sectionName).style.display = "block";
-    document.getElementById(sectionName).classList.add("active");
-    evt.currentTarget.className += " active";
-  }
+      <p style="text-align:center"><br>A gallery of</p>
+      <h3>MY WORK</h3>
+      <div class="line"></div>
+      <img id="work-img" src="work-gallery2.png" alt="work gallery">
+    </div>
 
-  // Initialize: Open the default section
-  document.getElementById("defaultOpen").click();
-</script>
-   
-</body>
-</html> 
+    <div id="History" class="navcontent">
+      <p style="text-align:center">Here's a brief</p>
+      <h3>HISTORY</h3>
+      <div class="line"></div>
+
+      <img src="history-1.png" alt="history image 1" style="float:left">
+      <p>
+        At 5 years old, started my first scrap book and began learning to paint. Gained a reputation in the family for the person who made cards for every celebration. Later that same year, my painting submission won second place in the town’s art fair.
+      </p>
+
+      <img src="history-2.png" alt="history image 2" style="float:right">
+      <p style="text-align:right">
+        <br>Participated in my first art show, showcasing visual and digital artworks, including a 18.5” x 21” photorealistic graphite drawing and oil painting, a landscape layered painting, a dress sewn in two days, and a projected digital illustration.
+      </p>
+
+      <img src="history-3.png" alt="image" style="float:left">
+      <p><br>Graduated Saint André Bessette High School the only Yearbook Designer and Illustrator, as well as a leader of the book club, robotics team member, student chapel member, and announcements speaker. Started and ran the school’s first art club, being the only student leader. Received awards in Visual Arts 11 and 12, completing both courses in the same year, and Marketing.
+      </p>
+      <div class="rectangle">
+        <h5>present day</h5>
+        <h4>Presently pursuing an Honours Bachelor of<br>
+          <i>Global Business and Digital Arts</i> at <u>Waterloo University</u>,<br>building up my knowledge of relevant industry tech and<br>software with projects and learning guided by<br>industry-experienced instructors.
+        </h4>
+        <img id="building-img" src="building.png" alt="GBDA building" style="float:right">
+      </div>
+      <br><br><br>
+      <p style="text-align:center">List of my</p>
+      <h3>SKILLS</h3>
+      <div class="line"></div>
+      <table>
+        <tr>
+          <th>Software</th>
+          <th>Technology</th>
+          <th>Languages</th>
+        </tr>
+        <tr>
+          <td>Adobe Photoshop</td>
+          <td>iPad Pro 2020</td>
+          <td>English</td>
+        </tr>
+        <tr>
+          <td>Adobe InDesign</td>
+          <td>Macbook Pro 2023</td>
+          <td>French</td>
+        </tr>
+        <tr>
+          <td>Adobe Illustrator</td>
+          <td>Canon EOS Rebel T7 Camera</td>
+          <td>Tagalog</td>
+        </tr>
+        <tr>
+          <td>Procreate</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Figma</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AutoCAD / Fusion360</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+
+    </div>
+
+    <div id="Mind" class="navcontent">
+      <p style="text-align:center">What's on my</p>
+      <h3>MIND</h3>
+      <div class="line"></div>
+      <h6 style="text-align:center">Hobbies</h6>
+      <div class="tab-container">
+        <div class="tab">
+          Fashion
+          <div class="content">
+            What began as a love for playing dress-up developed into a passion for fashion design. I started with fashion sketching, experimenting with pairing clothing and jewelry around my home, and progressed to exploring fashion photography. Eventually, I began creating my own print designs and clothing.
+          </div>
+
+        </div>
+        <div class="tab">
+          Arts
+          <div class="content">
+            Since my childhood of pencil sketching, scrapbooking, jewelry making, and painting I have received a formal education in art and now design. My interests in art now additionally include cinematography, animation, printmaking, 3D printing, comic illustration, and graphic design.
+          </div>
+        </div>
+        <div class="tab">
+          Sports
+          <div class="content">
+            When it comes to sports I have several to choose from, including skiing, rollerblading, ice skating, cycling, and golfing. I was previously a long-distance marathon runner, alongside regularly playing soccer and basketball. These days, I regularly go to the gym, swim, and run.
+          </div>
+        </div>
+        <div class="tab">
+          Music
+          <div class="content">
+            A love for singing and acting led to my interest in theatre and landing my first lead role in a production of the Wizard of Oz, as Dorothy. Continued acting alongside learning to play the piano and acoustic guitar.
+          </div>
+        </div>
+      </div>
+
+      <h6 style="text-align:center">Interests</h6>
+      <div class="tab-container">
+        <div class="tab">
+          Reading
+          <div class="content">
+            I enjoy a variety of book genres, including historical fiction, mystery, graphic novels, and comics. Some of my favorite books and series are The Thief Lord, Harry Potter, Macbeth, Assassin’s Curse, and Secrets. My favorite authors include Neil Gaiman, David Walliams, and Dr. Seuss.
+          </div>
+        </div>
+        <div class="tab">
+          Language Learning
+          <div class="content">
+            I am fully fluent in English, French, and Tagalog, with additional experience in Spanish and Korean.
+          </div>
+        </div>
+        <div class="tab">
+          Design
+          <div class="content">
+            I admire the work of fashion designers Robert Wun and Tamara Ralph, along with my favorite print designs by Areesha Khalid. When it comes to historical art, Vincent Van Gogh, Claude Monet, and Frida Kahlo are among my inspirations. For timeless animated filmmaking, I appreciate the artistry of Studio Ghibli, Gobelins, and classic Disney productions.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Contact" class="navcontent">
+      <p style="text-align:center">Feel free to</p>
+      <h3>CONTACT</h3>
+      <div class="line"></div>
+      <div class="rectangle-border">
+        <div class="contact-item">
+          <h6>Mail</h6>
+          <p><a href="mailto:cvhodgin@uwaterloo.ca"><br>cvhodgin@uwaterloo.ca</a></p>
+        </div>
+        <div class="contact-item">
+          <h6>Phone</h6>
+          <p><a href="tel:+15092330987"><br>+1 509-233-0987</a></p>
+        </div>
+        <div class="contact-item">
+          <h6>Social</h6>
+          <p><a href="https://www.linkedin.com/in/chloehodgins/"><br>https://www.linkedin.com/in/chloehodgins/</a></p>
+          <p><a href="https://github.com/chloehodgins/"><br>https://github.com/chloehodgins/</a></p>
+        </div>
+      </div>
+
+      <div class="rectangle">
+        <h4><strong>Looking forward to<br>hearing from you!</strong></h4>
+      </div>
+    </div>
+
+    <script>
+      function openNav(evt, sectionName) {
+        let i, navcontent, navlinks;
+
+        // Hide all sections
+        navcontent = document.getElementsByClassName("navcontent");
+        for (i = 0; i < navcontent.length; i++) {
+          navcontent[i].classList.remove("active");
+          navcontent[i].style.display = "none";
+          navcontent[i].scrollTop = 0; // Reset scroll position
+        }
+
+        navlinks = document.getElementsByClassName("navlinks");
+        for (i = 0; i < navlinks.length; i++) {
+          navlinks[i].className = navlinks[i].className.replace(" active", "");
+        }
+        document.getElementById(sectionName).style.display = "block";
+        document.getElementById(sectionName).classList.add("active");
+        evt.currentTarget.className += " active";
+      }
+
+      // Initialize: Open the default section
+      document.getElementById("defaultOpen").click();
+    </script>
+
+  </body>
+</html>
