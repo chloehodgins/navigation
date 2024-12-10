@@ -45,7 +45,7 @@
   display: flex;
   position: fixed;
   top: 130;
-  width: 98.1%; 
+  width: 99%; 
   height: 50px; /* Adjust height for top layout */
   z-index: 1000;
   justify-content: center; 
@@ -95,7 +95,6 @@
   padding: 12px;
   border: 1px solid #e6b3b3;
   width: 100%;
-  max-width: 99.6%;
   height: 1220px;
   background-image: url('paper-bg.JPG');
   box-sizing: border-box;
@@ -151,12 +150,23 @@ a {
 }
   
 .rectangle-border {
-  width: 50%; /* Adjust width as needed */
-  height: 600px; /* Adjust height as needed */
-  border: 2px solid #A94064; /* Border color and thickness */
-  background-color: transparent; /* Ensure no fill color */
-  position: relative; /* If positioning is needed */
-  box-sizing: border-box; /* Include border in dimensions */
+  display: flex; /* Enable Flexbox layout */
+  flex-direction: column; /* Stack the items vertically */
+  justify-content: space-evenly; /* Space out the items evenly vertically */
+  padding: 20px; /* Padding around the content */
+  border: 2px solid #A94064; /* Set the border color */
+  width: 50%; /* Adjust to fit your needs */
+  max-width: 600px; /* Adjust to fit your needs */
+  margin: 0 auto; /* Center the rectangle on the page */
+  max-height: 700px; /* Adjust the height to ensure space for all items */
+}
+  
+.contact-item {
+  display: flex;
+  flex-direction: column; /* Stack the text vertically within each item */
+  align-items: center; /* Center the content horizontally within each item */
+  text-align: center; /* Center the text */
+  margin: 100px 0; 
 }
   
 .line {
@@ -268,7 +278,31 @@ th:nth-child(1), th:nth-child(2), th:nth-child(3) {
   display: flex; 
   justify-content: center; 
   height: 100vh; 
-  margin: auto; 
+  margin-bottom: 80px;
+}
+  
+#Contact h6{
+  font-size: 18px; /* Adjust the font size */
+  color: #A94064; /* Set the text color */
+  font-family: "Verdana", sans-serif; /* Set font */
+  margin: 5px 0;
+  text-align: center; /* Center the text within each h5 */
+  flex: 1; /* Make each h5 take equal space */
+  flex-direction: column; 
+}
+  
+#Contact h4{
+  top: 25px;
+  left: 30px;
+}
+  
+#Contact p{
+  font-size: 14px; /* Font size for the paragraphs */
+  margin: 0; /* Remove default margin */
+  color: #C86B85; /* Paragraph text color */
+  font-family: "Gill Sans", sans-serif; /* Set font */
+  text-align: center; /* Center the text */
+  flex-direction: column; 
 }
   
 </style>
@@ -425,12 +459,22 @@ th:nth-child(1), th:nth-child(2), th:nth-child(3) {
   <h3>CONTACT</h3>
   <div class="line"></div>
   <div class="rectangle-border">
-    <p>Email</p>
-    <a href="mailto:cvhodgin@uwaterloo.ca"><br>cvhodgin@uwaterloo.ca</a>
-    <p>LinkedIn</p>
-    <a href="www.linkedin.com/in/chloehodgins"><br>in/chloehodgins/linked</a>
-  
+    <div class="contact-item">
+      <h6>Mail</h6>
+      <p><a href="mailto:cvhodgin@uwaterloo.ca">cvhodgin@uwaterloo.ca</a></p>
+    </div>
+    <div class="contact-item">
+      <h6>Phone</h6>
+      <p><a href="tel:+15092330987">+1 509-233-0987</a></p>
+    </div>
+    <div class="contact-item">
+      <h6>Social</h6>
+      <p><a href="https://www.linkedin.com/in/chloehodgins/">chloehodgins/linked-in</a></p>
+      <p><a href="https://github.com/chloehodgins/">chloehodgins/github</a></p>
+    </div>
   </div>
+  
+  <div class="rectangle"><h4><strong>Looking forward to<br>hearing from you!</strong></h4></div>
 </div>
 
 <script>
