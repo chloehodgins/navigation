@@ -150,6 +150,8 @@ a {
   z-index: 0; /* Ensures it's behind text */
 }
   
+
+  
 .line {
   width: 100%; 
   border-top: 2px solid #A94064; 
@@ -247,12 +249,21 @@ th:nth-child(1), th:nth-child(2), th:nth-child(3) {
  background-color: #FFCECE;
 }
   
+#work-img {
+  display: block;
+  margin: 0 auto; 
+  position: relative; 
+  z-index: 999; 
+  max-width: 100%;
+  height: auto;
+}
+  
 </style>
 </head>
   
 <body style="background-color:#FADADD;">
 
-<img id="signature-img" src="title-signature.png" alt="image" style="width:200; display: block; margin: 20px auto;">
+<img id="signature-img" src="title-signature.png" alt="title image" style="width:200; display: block; margin: 20px auto;">
 
 <div class="nav">
   <button class="navlinks" onclick="openNav(event, 'Main')" id="defaultOpen">Main</button>
@@ -270,9 +281,8 @@ th:nth-child(1), th:nth-child(2), th:nth-child(3) {
   
   <p style="text-align:center"><br>A gallery of</p>
   <h3>MY WORK</h3> 
-  <div class="line">
-    
-  </div>
+  <div class="line"></div>
+  <img id="work-img" src="work-gallery2.png" alt="work gallery">
 </div>
 
 <div id="History" class="navcontent">
@@ -379,19 +389,19 @@ th:nth-child(1), th:nth-child(2), th:nth-child(3) {
   <div class="tab">
     Reading
     <div class="content">
-      This is the expanded content for Tab 1. Add more details here as needed.
+      I enjoy a variety of book genres, including historical fiction, mystery, graphic novels, and comics. Some of my favorite books and series are The Thief Lord, Harry Potter, Macbeth, Assassin’s Curse, and Secrets. My favorite authors include Neil Gaiman, David Walliams, and Dr. Seuss.
     </div>
   </div>
   <div class="tab">
     Language Learning
     <div class="content">
-      This is the expanded content for Tab 2. Add more details here as needed.
+      I am fully fluent in English, French, and Tagalog, with additional experience in Spanish and Korean.
     </div>
   </div>
   <div class="tab">
     Design
     <div class="content">
-      This is the expanded content for Tab 3. Add more details here as needed.
+      I admire the work of fashion designers Robert Wun and Tamara Ralph, along with my favorite print designs by Areesha Khalid. When it comes to historical art, Vincent Van Gogh, Claude Monet, and Frida Kahlo are among my inspirations. For timeless animated filmmaking, I appreciate the artistry of Studio Ghibli, Gobelins, and classic Disney productions.
     </div>
   </div>
 </div>
